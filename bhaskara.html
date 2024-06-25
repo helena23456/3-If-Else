@@ -8,15 +8,33 @@
     */
     
     // Entrada de dados
-    
+    // Solicitar coeficientes da equação ao usuário
+        var a = parseFloat(prompt("Digite o coeficiente 'a' da equação (deve ser diferente de zero):"));
+        var b = parseFloat(prompt("Digite o coeficiente 'b' da equação:"));
+        var c = parseFloat(prompt("Digite o coeficiente 'c' da equação:"));
 
     
     // Processamento
-    
+    // Verificar se 'a' é diferente de zero
+        if (a === 0) {
+            alert("O coeficiente 'a' não pode ser zero. A equação não é de segundo grau.");
+        } else {
+            // Calcular o discriminante Δ
+            var delta = b * b - 4 * a * c;
+
+            // Verificar se o discriminante é negativo (raízes complexas) ou zero
+            if (delta < 0) {
+                document.write("A equação não possui raízes reais (raízes complexas).");
+            } else {
+                // Calcular as raízes
+                var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
 
     
     // Saída de dados
-    
+    document.write("As raízes da equação " + a + "x² + " + b + "x + " + c + " = 0 são: x1 = " + x1 + " e x2 = " + x2);
+            }
+        } 
     
     
 </script>
