@@ -3,14 +3,34 @@
     //PROBLEMA: Vogal - Construa um programa que leia um caractere e informe se este caractere é uma vogal.
 
     // Entrada de dados
-    
+  var caractere = prompt("Digite um caractere:");
+
 
     
     // Processamento
-    
+ var ehVogal = false;
+
+// Verificar se o caractere é uma vogal
+switch (caractere.toLowerCase()) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+        ehVogal = true;
+        break;
+    default:
+        ehVogal = false;
+}
+  
 
     
     // Saída de dados
+if (ehVogal) {
+    alert("O caractere '" + caractere + "' é uma vogal.");
+} else {
+    alert("O caractere '" + caractere + "' não é uma vogal.");
+}
 
     
 
