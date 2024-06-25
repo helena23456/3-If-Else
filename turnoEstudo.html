@@ -12,15 +12,31 @@
     */
 
     // Entrada de Dados
+var turno = prompt("Em que turno você estuda?\nDigite M para Matutino, V para Vespertino ou N para Noturno:");
 
 
 
     // Processamento
+var mensagem;
+
+switch (turno) {
+    case 'M':
+        mensagem = "Bom Dia!";
+        break;
+    case 'V':
+        mensagem = "Boa Tarde!";
+        break;
+    case 'N':
+        mensagem = "Boa Noite!";
+        break;
+    default:
+        mensagem = "Valor Inválido!";
+}
 
 
 
     // Saída de Dados
-    
+  alert(mensagem);
 
 
 </script>
