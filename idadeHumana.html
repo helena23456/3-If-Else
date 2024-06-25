@@ -9,15 +9,33 @@
     */
 
     // Entrada de Dados
-
+var idadeHumanaCao = 4; // Exemplo: idade do cão em anos humanos
+var porteCao = "pequeno"; // Exemplo: pode ser "pequeno", "médio" ou "grande"
 
 
     // Processamento
+var fatorMultiplicativo;
+
+switch (porteCao) {
+    case "pequeno":
+        fatorMultiplicativo = 5;
+        break;
+    case "médio":
+        fatorMultiplicativo = 6;
+        break;
+    case "grande":
+        fatorMultiplicativo = 7;
+        break;
+    default:
+        fatorMultiplicativo = 5; // Se o porte não for especificado corretamente, assumimos porte pequeno
+}
+
+var idadeCao = idadeHumanaCao * fatorMultiplicativo;
 
 
 
     // Saída de Dados
-    
+    console.log("A idade do seu cão em anos de cão é: " + idadeCao);
 
 
 </script>
