@@ -8,15 +8,77 @@
     */
 
     // Entrada de Dados
+var numero1 = parseFloat(prompt("Digite o primeiro número:"));
+var numero2 = parseFloat(prompt("Digite o segundo número:"));
+
+var operacao = prompt("Escolha a operação desejada: + (soma), - (subtração), * (multiplicação), / (divisão)");
 
 
 
     // Processamento
+var resultado;
+var caracteristicasNumero1, caracteristicasNumero2;
+
+switch (operacao) {
+    case "+":
+        resultado = numero1 + numero2;
+        break;
+    case "-":
+        resultado = numero1 - numero2;
+        break;
+    case "*":
+        resultado = numero1 * numero2;
+        break;
+    case "/":
+        resultado = numero1 / numero2;
+        break;
+    default:
+        alert("Operação inválida.");
+}
+
+// Determinar características do número 1
+caracteristicasNumero1 = determinarCaracteristicas(numero1);
+
+// Determinar características do número 2
+caracteristicasNumero2 = determinarCaracteristicas(numero2);
+
+// Função para determinar características de um número
+function determinarCaracteristicas(numero) {
+    var caracteristicas = "";
+    
+    // Par ou ímpar
+    if (numero % 2 === 0) {
+        caracteristicas += "par, ";
+    } else {
+        caracteristicas += "ímpar, ";
+    }
+    
+    // Positivo ou negativo
+    if (numero > 0) {
+        caracteristicas += "positivo, ";
+    } else if (numero < 0) {
+        caracteristicas += "negativo, ";
+    } else {
+        caracteristicas += "zero, ";
+    }
+    
+    // Inteiro ou decimal
+    if (numero % 1 === 0) {
+        caracteristicas += "inteiro";
+    } else {
+        caracteristicas += "decimal";
+    }
+    
+    return caracteristicas;
+}
 
 
 
     // Saída de Dados
-    
+ console.log("O resultado de " + numero1 + " " + operacao + " " + numero2 + " é: " + resultado);
+console.log("Características do primeiro número (" + numero1 + "): " + caracteristicasNumero1);
+console.log("Características do segundo número (" + numero2 + "): " + caracteristicasNumero2);
+
 
 
 </script>
